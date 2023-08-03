@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+const Hello = ({name="World", age="many years old"}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Hello {name}, you are {age}</p>
     </div>
   );
-}
+};
+
+const App = () => {
+  const age = 12
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello name="bob" age="9"/>
+      <Hello name="Jeff" age={age}/>
+      <Hello />
+    </div>
+  );
+};
 
 export default App;
+
+
